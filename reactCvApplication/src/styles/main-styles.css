@@ -1,0 +1,30 @@
+.header-div {
+    background-color: blue;
+    height: 4rem;
+}
+.container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .left-side {
+    background-color: green;
+    display: flex;
+    flex-grow: 0;
+    flex-basis: 20rem;
+    flex-shrink: 0;
+    height: 100%;
+  }
+  
+  .right-side {
+  background-color: red;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  }
+
+.footer {
+    background-color: purple;
+}
