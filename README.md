@@ -1,1 +1,1 @@
-# My personal little handy dandy react template
+# React CV Application
