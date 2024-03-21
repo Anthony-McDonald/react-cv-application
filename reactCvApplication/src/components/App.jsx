@@ -9,7 +9,6 @@ return (
 <>
 <Header></Header>
 <MainArea></MainArea>
-<Footer></Footer>
 
 
 </>
