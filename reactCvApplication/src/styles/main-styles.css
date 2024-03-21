@@ -1,6 +1,12 @@
 .header-div {
-    background-color: blue;
     height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
 }
 .container {
     display: flex;
@@ -23,6 +29,12 @@
   display: flex;
   flex-grow: 1;
   height: 100%;
+  }
+
+  .right-side, .left-side {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
   }
 
 .footer {
