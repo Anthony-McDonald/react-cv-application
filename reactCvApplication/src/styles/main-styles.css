@@ -16,7 +16,7 @@
   }
   
   .left-side {
-    background-color: green;
+
     display: flex;
     flex-grow: 0;
     flex-basis: 20rem;
@@ -39,4 +39,46 @@
 
 .footer {
     background-color: purple;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.editable-form {
+
+width: 80%;
+padding: 1rem;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2rem;
+text-align: center;
+flex-direction: column;
+}
+
+.form-title-box {
+  border-bottom: 2px solid white;
+}
+
+.form-rows {
+  height: 5%;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-header {
+  margin-bottom: -2rem;
+}
+
+.buttons {
+  height: 4rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
 }
