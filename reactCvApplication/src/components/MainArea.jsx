@@ -42,7 +42,7 @@ export default function MainArea() {
         });
     }
     function handleEditPress() {
-        console.log("edit was pressed");
+        setInputValues({...lastValues});
     }
 
 
