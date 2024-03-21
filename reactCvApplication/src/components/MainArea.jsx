@@ -15,6 +15,36 @@ export default function MainArea() {
         ex2: '',
         ex3: ''
     });
+    const [lastValues, setLastValues] = useState({
+        pd1: '',
+        pd2: '',
+        pd3: '',
+        ed1: '',
+        ed2: '',
+        ed3: '',
+        ex1: '',
+        ex2: '',
+        ex3: ''
+    });
+
+    function handleSubmitPress() {
+        setLastValues({...inputValues});
+        setInputValues({
+            pd1: '',
+            pd2: '',
+            pd3: '',
+            ed1: '',
+            ed2: '',
+            ed3: '',
+            ex1: '',
+            ex2: '',
+            ex3: ''
+        });
+    }
+    function handleEditPress() {
+        console.log("edit was pressed");
+    }
+
 
     const handleInputChange = (name, value) => {
         setInputValues(prevState => ({
@@ -28,16 +58,19 @@ export default function MainArea() {
 <div className="left-side">
 {/* <h3>leftSide</h3> */}
 
-<EditableForm inputValues={inputValues} onInputChange={handleInputChange}></EditableForm>
+<EditableForm editFunction = {handleEditPress}submitFunction = {handleSubmitPress}inputValues={inputValues} onInputChange={handleInputChange}></EditableForm>
 </div>
 
 <div className="right-side">
 {/* <h3>rightSide</h3>  */}
-<CVSection name={"Personal Details"} details1={"Name: " + inputValues.pd1} details2={"email: " + inputValues.pd2} details3={"phone number" + inputValues.pd3}></CVSection>
-<CVSection name={"Education"} details1={"School: " + inputValues.ed1} details2={"University Degree: " +inputValues.ed2} details3={"Extra Curriculars: " +inputValues.ed3}></CVSection>
-<CVSection name={"Previous Work"} details1={"1. " + inputValues.ex1} details2={"2. " + inputValues.ex2} details3={"3." + inputValues.ex3}></CVSection>
+<CVSection name={"Personal Details"} details1={"Name: " + lastValues.pd1} details2={"email: " + lastValues.pd2} details3={"phone number: " + lastValues.pd3}></CVSection>
+<CVSection name={"Education"} details1={"School: " + lastValues.ed1} details2={"University Degree: " +lastValues.ed2} details3={"Extra Curriculars: " + lastValues.ed3}></CVSection>
+<CVSection name={"Previous Work"} details1={"1. " + lastValues.ex1} details2={"2. " + lastValues.ex2} details3={"3." + lastValues.ex3}></CVSection>
 </div>
 
 </div>
     )
 }
+
+
+

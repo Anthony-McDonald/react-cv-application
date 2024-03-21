@@ -4,7 +4,7 @@ import FormRow from "./FormRow";
 
 import Button from "./Button";
 
-export default function EditableForm({ inputValues, onInputChange}) {
+export default function EditableForm({ editFunction, submitFunction, inputValues, onInputChange}) {
     return (
 
 <div className="editable-form">
@@ -30,19 +30,11 @@ export default function EditableForm({ inputValues, onInputChange}) {
 </div>
 
     <div className="buttons">
-        <Button name="Edit"buttonEffect={editClicked} ></Button>
-        <Button name="Submit"buttonEffect={submitClicked}></Button>
+        <Button name="Edit"buttonEffect={editFunction} ></Button>
+        <Button name="Submit"buttonEffect={submitFunction}></Button>
     </div>
 
 </div>
 
     );
-}
-
-function editClicked() {
-    console.log("edit clicked");
-}
-
-function submitClicked() {
-    console.log("submit clicked");
 }
